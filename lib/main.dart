@@ -174,20 +174,27 @@ class _HomePageState extends State<HomePage> {
       body: new ListView(
         children: [
           image_courosel,
-          Padding(
-            //padding widget begins here
-              padding: EdgeInsets.all(8.0),
-               child: Text("Categories",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,backgroundColor: Colors.orange,fontSize: 20),),
+          Container(
+            margin: EdgeInsets.only(left: 100),
+            child: Padding(
+              //padding widget begins here
+                padding: EdgeInsets.all(8.0),
+
+                 child: Text("Categories",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,backgroundColor: Colors.orange,fontSize: 20),),
 
 
 
+            ),
           ),
           //horizontal list  begins here
           HorizontalList(),
           
-          Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Text("Recent Products",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,backgroundColor: Colors.orange,fontSize: 20),),
+          Container(
+            margin: EdgeInsets.only(left: 80),
+            child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Text("Recent Products",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,backgroundColor: Colors.orange,fontSize: 20),),
+            ),
           ),
 
           //gridview

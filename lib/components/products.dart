@@ -26,21 +26,28 @@ class _ProductsState extends State<Products> {
     {
       "name":"Shoes",
       "picture":"images/products/shoe1.jpg",
-      "oldPrice":"400",
-      "price":"350",
+      "oldPrice":"700",
+      "price":"550",
     },
     {
       "name":"Pants",
       "picture":"images/products/pants2.jpeg",
-      "oldPrice":"400",
-      "price":"350",
+      "oldPrice":"250",
+      "price":"210",
     },
     {
       "name":"Hills",
       "picture":"images/products/hills1.jpeg",
-      "oldPrice":"400",
-      "price":"350",
+      "oldPrice":"300",
+      "price":"250",
     },
+    {
+      "name":"Skirts",
+      "picture":"images/products/skt2.jpeg",
+      "oldPrice":"380",
+      "price":"295",
+    },
+
     {
       "name":"Skirts",
       "picture":"images/products/skt2.jpeg",
@@ -98,7 +105,14 @@ this.prod_price
                 leading: Text(prod_name,style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 title: Text("Ksh.$prod_price",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w800),),
-                subtitle: Text(prod_old_price),
+                subtitle: Text(
+                  "Ksh. $prod_old_price",
+                  style: TextStyle(
+                      color: Colors.black54,
+                      fontWeight: FontWeight.w800,
+                      decoration: TextDecoration.lineThrough
+                  ),
+                ),
               ),
             ),
             
