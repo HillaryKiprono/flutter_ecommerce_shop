@@ -10,7 +10,8 @@ class ProductDetails extends StatefulWidget {
   ProductDetails({
     this.product_detail_name,
     this.product_detail_new_price,
-    this.product_detail_old_price, this.product_detail_picture,
+    this.product_detail_old_price,
+    this.product_detail_picture,
   }
   );
 
@@ -62,8 +63,37 @@ class _ProductDetailsState extends State<ProductDetails> {
                 color: Colors.white,
                 child: Image.asset(widget.product_detail_picture),
 
-              )),
-          )
+              ),
+            footer: Container(color: Colors.white,
+            child: ListTile(
+              leading: Text(
+                  widget.product_detail_name,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,fontSize: 16.0
+                ),
+
+              ),
+              title: Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                        "Ksh.${widget.product_detail_old_price}",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        decoration: TextDecoration.lineThrough
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(widget.product_detail_new_price),
+                  ),
+                ],
+              ),
+            ),
+            ),
+            ),
+          ),
+
         ],
       ),
 

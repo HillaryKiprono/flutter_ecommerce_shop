@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'components/horizontal_listview.dart';
 import 'components/products.dart';
 
-
-
 void main() {
   runApp(
     MaterialApp(
@@ -99,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                 title: Text(
                   "Home Page"
                 ),
-                leading: Icon(Icons.home),
+                leading: Icon(Icons.home,color: Colors.lightGreen,),
               ),
             ),
 
@@ -119,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                 title: Text(
                     "My Orders"
                 ),
-                leading: Icon(Icons.shopping_basket),
+                leading: Icon(Icons.shopping_basket,color: Colors.indigo,),
               ),
             ),
 
