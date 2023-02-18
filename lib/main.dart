@@ -2,9 +2,10 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 
-import 'components/horizontal_listview.dart';
-
 // my own imports
+import 'components/horizontal_listview.dart';
+import 'components/products.dart';
+
 
 
 void main() {
@@ -183,6 +184,17 @@ class _HomePageState extends State<HomePage> {
           ),
           //horizontal list  begins here
           HorizontalList(),
+          
+          Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Text("Recent Products"),
+          ),
+
+          //gridview
+          Container(
+            height: 320.0,
+            child: Products(),
+          )
         ],
       ),
 
