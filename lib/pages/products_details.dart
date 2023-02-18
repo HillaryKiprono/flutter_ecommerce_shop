@@ -107,7 +107,25 @@ class _ProductDetailsState extends State<ProductDetails> {
               // ========the Size Button=====
               Expanded(
                 child: MaterialButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    showDialog(
+                        context: context,
+                        builder: (context){
+                          return new AlertDialog(
+                            title: Text("Size"),
+                            content: Text("Choose the Size"),
+                            actions: [
+                              new MaterialButton(onPressed: (){
+                                Navigator.of(context).pop(context);
+                              },
+                                child:Text("Close",style: TextStyle(
+                                  color: Colors.indigo
+                                ),) ,)
+                            ],
+                          );
+                        }
+                    );
+                  },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.2,
@@ -128,7 +146,30 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
               Expanded(
                 child: MaterialButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    showDialog(
+                        context: context,
+                        builder: (context){
+                          return AlertDialog(
+                            title: Text("Color"),
+                            content: Text("Choose your favorite color"),
+                            actions: [
+                              MaterialButton(onPressed: (){
+                                Navigator.of(context).pop(context);
+                              },
+                                child: Text(
+                                    "Close",
+                                style: TextStyle(
+                                  color: Colors.red,
+                                ),),
+                              ),
+
+                            ],
+                          );
+                        },
+
+                    );
+                  },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.2,
@@ -151,7 +192,25 @@ class _ProductDetailsState extends State<ProductDetails> {
 
               Expanded(
                 child: MaterialButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    showDialog(
+                        context: context,
+                        builder: (context){
+                          return AlertDialog(
+                            title: Text("Quantity"),
+                            content: Text("Choose number of quantity"),
+                            actions: [
+
+                              MaterialButton(onPressed: (){
+                                Navigator.of(context).pop(context);
+                              },
+                              child: Text(
+                                  "Close",
+                              style: TextStyle(color: Colors.red),),)
+                            ],
+                          );
+                        },);
+                  },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.2,
