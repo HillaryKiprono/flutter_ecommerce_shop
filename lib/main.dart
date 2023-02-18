@@ -177,7 +177,7 @@ class _HomePageState extends State<HomePage> {
           Padding(
             //padding widget begins here
               padding: EdgeInsets.all(8.0),
-               child: Text("Categories"),
+               child: Text("Categories",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,backgroundColor: Colors.orange,fontSize: 20),),
 
 
 
@@ -187,7 +187,7 @@ class _HomePageState extends State<HomePage> {
           
           Padding(
               padding: EdgeInsets.all(20.0),
-              child: Text("Recent Products"),
+              child: Text("Recent Products",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,backgroundColor: Colors.orange,fontSize: 20),),
           ),
 
           //gridview

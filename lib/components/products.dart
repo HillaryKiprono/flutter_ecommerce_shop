@@ -93,9 +93,12 @@ this.prod_price
           onTap: (){},
           child: GridTile(
             footer: Container(
-              color: Colors.white,
+              color: Colors.white70,
               child: ListTile(
-                leading: Text(prod_name,style: TextStyle(fontWeight: FontWeight.bold),),
+                leading: Text(prod_name,style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                title: Text("Ksh.$prod_price",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w800),),
+                subtitle: Text(prod_old_price),
               ),
             ),
             
