@@ -64,7 +64,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 child: Image.asset(widget.product_detail_picture),
 
               ),
-            footer: Container(color: Colors.white,
+            footer: Container(color: Colors.white70,
             child: ListTile(
               leading: Text(
                   widget.product_detail_name,
@@ -85,7 +85,13 @@ class _ProductDetailsState extends State<ProductDetails> {
                     ),
                   ),
                   Expanded(
-                    child: Text(widget.product_detail_new_price),
+                    child: Text(
+                        "Ksh.${widget.product_detail_new_price}",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -93,6 +99,112 @@ class _ProductDetailsState extends State<ProductDetails> {
             ),
             ),
           ),
+
+          //=================the first Buttons========
+
+          Row(
+            children: [
+              // ========the Size Button=====
+              Expanded(
+                child: MaterialButton(
+                  onPressed: (){},
+                  color: Colors.white,
+                  textColor: Colors.grey,
+                  elevation: 0.2,
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: Text(
+                            "Size"
+                          ),
+                      ),
+
+                      Expanded(
+                        child: Icon(Icons.arrow_drop_down)
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                child: MaterialButton(
+                  onPressed: (){},
+                  color: Colors.white,
+                  textColor: Colors.grey,
+                  elevation: 0.2,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                            "Color"
+                        ),
+                      ),
+
+                      Expanded(
+                          child: Icon(Icons.arrow_drop_down)
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+
+              Expanded(
+                child: MaterialButton(
+                  onPressed: (){},
+                  color: Colors.white,
+                  textColor: Colors.grey,
+                  elevation: 0.2,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                            "Qty"
+                        ),
+                      ),
+
+                      Expanded(
+                          child: Icon(Icons.arrow_drop_down)
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+            ],
+          ),
+
+          Row(
+            children: [
+              // ========the Size Button=====
+              Expanded(
+                child: Container(
+                  margin: EdgeInsets.only(left: 40),
+                  child: MaterialButton(
+                    onPressed: (){},
+                    color: Colors.red,
+                    textColor: Colors.white,
+                    elevation: 0.2,
+                    child: Text("Buy Now")
+                  ),
+                ),
+              ),
+              IconButton(
+                  onPressed: (){},
+                  icon: Icon(Icons.add_shopping_cart),color: Colors.red,
+              ),
+
+              IconButton(
+                  onPressed: (){},
+                  icon: Icon(Icons.favorite_border,color: Colors.red,)
+              )
+
+
+            ],
+          ),
+
+
+
 
         ],
       ),
