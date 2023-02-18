@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce_shop/pages/products_details.dart';
 
 class Products extends StatefulWidget {
   const Products({Key? key}) : super(key: key);
@@ -96,30 +97,33 @@ this.prod_price
     return Card(
       child: Hero(
         tag: prod_name,
-        child: InkWell(
-          onTap: (){},
-          child: GridTile(
-            footer: Container(
-              color: Colors.white70,
-              child: ListTile(
-                leading: Text(prod_name,style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                title: Text("Ksh.$prod_price",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w800),),
-                subtitle: Text(
-                  "Ksh. $prod_old_price",
-                  style: TextStyle(
-                      color: Colors.black54,
-                      fontWeight: FontWeight.w800,
-                      decoration: TextDecoration.lineThrough
+        child:Material(
+          child: InkWell(
+            onTap: ()=>Navigator.of(context).push(new MaterialPageRoute(builder: (context)=>ProductDetails())),
+            child: GridTile(
+              footer: Container(
+                color: Colors.white70,
+                child: ListTile(
+                  leading: Text(prod_name,style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  title: Text("Ksh.$prod_price",style: TextStyle(color: Colors.red,fontWeight: FontWeight.w800),),
+                  subtitle: Text(
+                    "Ksh. $prod_old_price",
+                    style: TextStyle(
+                        color: Colors.black54,
+                        fontWeight: FontWeight.w800,
+                        decoration: TextDecoration.lineThrough
+                    ),
                   ),
                 ),
               ),
+
+              child: Image.asset(prod_picture),
+
             ),
-            
-            child: Image.asset(prod_picture),
-            
           ),
         ),
+
       ),
     );
   }
