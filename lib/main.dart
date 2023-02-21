@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title: Text(
-                    "Categories"
+                    "Shopping cart"
                 ),
                 leading: Icon(Icons.dashboard),
               ),
