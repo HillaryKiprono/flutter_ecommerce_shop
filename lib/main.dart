@@ -60,13 +60,15 @@ class _HomePageState extends State<HomePage> {
 
           IconButton(
               onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>ShoppingCart()));
               },
               icon: Icon(Icons.search,color: Colors.white,),
           ),
 
           IconButton(
-            onPressed: null,
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ShoppingCart()));
+
+            },
             icon: Icon(Icons.shopping_cart,color: Colors.white,),
           ),
 
